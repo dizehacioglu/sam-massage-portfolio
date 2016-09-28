@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  
+  .banner.contact
+    h1 Contact Me
+  
+  main.container 
+    form
+      .row
+        .six.columns
+          label(for='exampleEmailInput') Your email
+          input#exampleEmailInput.u-full-width(type='email', placeholder='test@mailbox.com')
+        .six.columns
+          label(for='exampleRecipientInput') Reason for contacting
+          select#exampleRecipientInput.u-full-width
+            option(value='Option 1') Appointment Request
+            option(value='Option 2') Questions
+            option(value='Option 3') Other
+      label(for='exampleMessage') Message
+      textarea#exampleMessage.u-full-width(placeholder='Hello there...')
+      label.example-send-yourself-copy
+        input(type='checkbox')
+        span.label-body Send a copy to yourself
+      input.button-primary(type='submit', value='Submit')

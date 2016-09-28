@@ -29,6 +29,13 @@ nav a:hover {
 .banner {
   height: 400px;
   background-color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.banner.services {
   /*background-image: url('/images/spa.jpg');*/
   /*background-size: cover;*/
 }
@@ -57,6 +64,28 @@ main.container {
   border-radius: 50%;
   margin: 0 15px;
 }
+
+.baseline {
+  display: flex;
+  align-items: center;
+}
+
+.qa-selected {
+  background-color: lightblue;
+}
+
+.qa-template h4 {
+  display: inline-block;
+  margin-right: 10px;
+  font-family: 'Pacifico', cursive;
+  color: teal;
+  size: 24px;
+}
+
+.qa-template .answer {
+  display: none;
+}
+
 
 footer {
   margin-top: 50px;
