@@ -86,7 +86,8 @@ main.container {
 }
 
 .qa-selected {
-  background-color: lightblue;
+  border-bottom: 1px solid #434343;
+  /*background-color: lightblue;*/
 }
 
 .qa-template h4 {
@@ -98,7 +99,6 @@ main.container {
 }
 
 .qa-template .question {
-  border-radius: 10%;
   padding: 10px;
 }
 
@@ -109,7 +109,12 @@ main.container {
 
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10px;
   margin-top: 50px;
-  height: 75px;
+  height: 50px;
   background-color: teal;
 }
