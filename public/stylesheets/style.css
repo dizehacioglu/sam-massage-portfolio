@@ -35,9 +35,24 @@ nav a:hover {
   color: white;
 }
 
+.banner.main {
+  background-image: url('/images/main.jpg');
+  background-size: cover;
+}
+
 .banner.services {
-  /*background-image: url('/images/spa.jpg');*/
-  /*background-size: cover;*/
+  background-image: url('/images/services.jpg');
+  background-size: cover;
+}
+
+.banner.faq {
+  background-image: url('/images/faq.jpg');
+  background-size: cover;
+}
+
+.banner.contact {
+  background-image: url('/images/contact.jpg');
+  background-size: cover;
 }
 
 main.container {
@@ -83,6 +98,7 @@ main.container {
 }
 
 .qa-template .question {
+  border-radius: 10%;
   padding: 10px;
 }
 
