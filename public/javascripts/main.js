@@ -3,7 +3,7 @@ $(document).ready(function(){
 
   $('.qa-template').on('click', function(e){
     $('.answer', this).toggle();
-    $(this).toggleClass('qa-selected');
+    $('.question', this).toggleClass('qa-selected');
   })
 
 

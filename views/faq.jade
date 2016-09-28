@@ -6,10 +6,11 @@ block content
     h1 FAQ
     
   main.container
-    .qa-template
-      .question
-        h4 Q:
-        span.question-content Question content here?
-      .answer.animated.slideInDown
-        h4 A:
-        span.answer-content Answer content here.
+    for qa in qas
+      .qa-template
+        .question
+          h4 Q:
+          span.question-content #{qa.question}
+        .answer.animated.slideInDown
+          h4 A:
+          span.answer-content #{qa.answer}

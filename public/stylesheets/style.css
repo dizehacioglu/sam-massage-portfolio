@@ -82,7 +82,12 @@ main.container {
   size: 24px;
 }
 
+.qa-template .question {
+  padding: 10px;
+}
+
 .qa-template .answer {
+  padding: 10px;
   display: none;
 }
 
