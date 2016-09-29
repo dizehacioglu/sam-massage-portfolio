@@ -8,7 +8,7 @@ var knex = require('knex')({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Samantha Luce' });
+  res.render('index', { title: 'Luce Leaf Massage' });
 });
 
 router.get('/services', function(req, res, next){

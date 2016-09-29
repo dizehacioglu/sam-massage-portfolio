@@ -14,7 +14,7 @@ nav {
 nav span.title {
   font-family: 'Pacifico', cursive;
   font-size: 40px;
-  color: teal;
+  color: #546E50;
 }
 
 nav a {
@@ -23,19 +23,19 @@ nav a {
 }
 
 nav a:hover {
-  color: teal;
+  color: #546E50;
 }
 
 .banner {
   height: 400px;
-  background-color: teal;
+  background-color: #546E50;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
 }
 
-.banner.main {
+.banner.contact {
   background-image: url('/images/main.jpg');
   background-size: cover;
 }
@@ -50,7 +50,7 @@ nav a:hover {
   background-size: cover;
 }
 
-.banner.contact {
+.banner.main {
   background-image: url('/images/contact.jpg');
   background-size: cover;
 }
@@ -66,16 +66,16 @@ main.container {
 }
 
 .sam-pic img{
-  width: 100%;
+  /*width: 100%;*/
   border-radius: 50%;
-  border: 1px solid teal;
+  border: 1px solid #546E50;
 }
 
 .circle {
   display: inline-block;
   height: 10px;
   width: 10px;
-  background-color: teal;
+  background-color: #546E50;
   border-radius: 50%;
   margin: 0 15px;
 }
@@ -94,7 +94,7 @@ main.container {
   display: inline-block;
   margin-right: 10px;
   font-family: 'Pacifico', cursive;
-  color: teal;
+  color: #546E50;
   size: 24px;
 }
 
@@ -107,6 +107,16 @@ main.container {
   display: none;
 }
 
+input[type="submit"].button-primary {
+  background-color: #BAA6A6;
+  border-color: #BAA6A6;
+}
+
+input[type="submit"].button-primary:hover {
+  background-color: #2A2928;
+  border-color: #2A2928;
+}
+
 
 footer {
   display: flex;
@@ -116,5 +126,5 @@ footer {
   font-size: 10px;
   margin-top: 50px;
   height: 50px;
-  background-color: teal;
+  background-color: #546E50;
 }

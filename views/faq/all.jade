@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  main.container
+    h3 All FAQs
+    a(href="/faqs/new")
+      button New FAQ
+    
+    table.u-full-width
+      thead
+        tr
+          th #
+          th Question
+          th Answer
+          th Actions
+      tbody
+        for faq in faqs
+          tr
+            td #{faq.id}
+            td #{faq.question}
+            td #{faq.answer}
+            td 
+              a(href="/faqs/#{faq.id}/edit") 
+                button Edit
+              a(href="/faqs/#{faq.id}/delete")
+                button Delete

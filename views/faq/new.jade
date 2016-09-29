@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  main.container
+    h3 New FAQ
+    form(method="post" action="/faqs/new")
+      .row
+        label(for='question') Question
+        input#question.u-full-width(type='text' name="question")
+      .row
+        label(for='answer') Answer
+        input#answer.u-full-width(type="text" name="answer")
+      input(type='submit', value='Submit')
