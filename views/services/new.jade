@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  main.container
+    h3 New FAQ
+    form(method="post" action="/services-admin/new")
+      .row
+        label(for='question') Name
+        input#question.u-full-width(type='text' name="name")
+      .row
+        label(for='answer') Description
+        input#answer.u-full-width(type="text" name="description")
+      .row
+        label(for='answer') Duration (in minutes)
+        input#answer.u-full-width(type="text" name="duration")
+      .row
+        label(for='answer') Price
+        input#answer.u-full-width(type="text" name="price")
+      input(type='submit', value='Submit')

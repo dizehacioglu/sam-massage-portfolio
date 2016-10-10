@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  main.container
+    h3 Edit Service
+    form(method="post" action="/services-admin/#{service.id}/edit")
+      .row
+        label(for='question') Name
+        input#question.u-full-width(type='text' name="name" value="#{service.name}")
+      .row
+        label(for='answer') Description
+        input#answer.u-full-width(type="text" name="description" value="#{service.description}")
+      .row
+        label(for='answer') Duration (in minutes)
+        input#answer.u-full-width(type="text" name="duration" value="#{service.duration}")
+      .row
+        label(for='answer') Price
+        input#answer.u-full-width(type="text" name="price" value="#{service.price}")
+      input(type='submit', value='Submit')

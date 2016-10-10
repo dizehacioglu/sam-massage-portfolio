@@ -5,5 +5,11 @@ block content
   .banner.services
     h1 Services
   
-  main.container
-    h4 Massage
+  main.container.center
+    for service in services
+        h5 #{service.name} 
+          .circle
+          .circle
+          .circle 
+          | #{service.duration}
+        p #{service.price} - #{service.description}

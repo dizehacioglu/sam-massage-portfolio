@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+  main.container
+    h3 All Services
+    a(href="/services-admin/new")
+      button New Service
+    
+    table.u-full-width
+      thead
+        tr
+          th #
+          th Name
+          th Description
+          th Duration
+          th Price
+          th Actions
+      tbody
+        for service in services
+          tr
+            td #{service.id}
+            td #{service.name}
+            td #{service.description}
+            td #{service.duration}
+            td #{service.price}
+            td 
+              a(href="/services-admin/#{service.id}/edit") 
+                button Edit
+              a(href="/services-admin/#{service.id}/delete")
+                button Delete
