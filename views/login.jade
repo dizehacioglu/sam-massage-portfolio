@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  main.container.center
+    if error
+      .error #{error}
+    form(action="/users/login" method="post")
+      label(for="username") Username
+      input(type="text" name="username")
+      label(for="password") Password
+      input(type="password" name="password")
+      p
+        input(type="submit" value="Login")

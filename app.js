@@ -1,8 +1,10 @@
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
@@ -11,6 +13,14 @@ var faq = require('./routes/faq');
 var services = require('./routes/services');
 
 var app = express();
+
+function ensureLoggedInUser(req, res, next) {
+  if (req.session.user) {
+    next();
+  } else {
+    res.redirect('/users/login')
+  }
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,10 +32,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cookieSession({
+  name: 'session',
+  keys: [process.env.SECRET1, process.env.SECRET2, process.env.SECRET3]
+}))
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use(ensureLoggedInUser);
 app.use('/faqs', faq);
 app.use('/services-admin', services);
 

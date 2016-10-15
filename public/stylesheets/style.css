@@ -121,6 +121,10 @@ input[type="submit"].button-primary:hover {
   border-color: #2A2928;
 }
 
+.error {
+  color: red;
+}
+
 
 footer {
   display: flex;
