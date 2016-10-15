@@ -41,8 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use(ensureLoggedInUser);
-app.use('/faqs', faq);
-app.use('/services-admin', services);
+app.use('/admin/faqs', faq);
+app.use('/admin/services', services);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -19,7 +19,7 @@ router.get('/new', function(req, res, next){
 
 router.post('/new', function(req, res, next){
   knex('services').insert(req.body).then(function(){
-    res.redirect('/services-admin')
+    res.redirect('/admin/services')
   })
 })
 
@@ -32,13 +32,13 @@ router.get('/:id/edit', function(req, res, next){
 router.post('/:id/edit', function(req, res, next){
   knex('services').where('id', req.params.id).update(req.body).then(function(data){
     console.log(data);
-    res.redirect('/services-admin');
+    res.redirect('/admin/services');
   })
 })
 
 router.get('/:id/delete', function(req, res, next){
   knex('services').where('id', req.params.id).del().then(function(){
-    res.redirect('/services-admin');
+    res.redirect('/admin/services');
   })
 })
 
