@@ -3,7 +3,7 @@ extends ../layout
 block content
   main.container
     h3 All FAQs
-    a(href="/faqs/new")
+    a(href="admin/faqs/new")
       button New FAQ
     
     table.u-full-width
@@ -20,7 +20,7 @@ block content
             td #{faq.question}
             td #{faq.answer}
             td 
-              a(href="/faqs/#{faq.id}/edit") 
+              a(href="admin/faqs/#{faq.id}/edit") 
                 button Edit
-              a(href="/faqs/#{faq.id}/delete")
+              a(href="admin/faqs/#{faq.id}/delete")
                 button Delete

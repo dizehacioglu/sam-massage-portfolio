@@ -3,7 +3,7 @@ extends ../layout
 block content
   main.container
     h3 New FAQ
-    form(method="post" action="/faqs/new")
+    form(method="post" action="admin/faqs/new")
       .row
         label(for='question') Question
         input#question.u-full-width(type='text' name="question")

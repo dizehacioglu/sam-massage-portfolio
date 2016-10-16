@@ -3,7 +3,7 @@ extends ../layout
 block content
   main.container
     h3 Edit Service
-    form(method="post" action="/services-admin/#{service.id}/edit")
+    form(method="post" action="/admin/services/#{service.id}/edit")
       .row
         label(for='question') Name
         input#question.u-full-width(type='text' name="name" value="#{service.name}")
