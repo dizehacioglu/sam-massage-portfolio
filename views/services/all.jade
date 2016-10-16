@@ -3,7 +3,7 @@ extends ../layout
 block content
   main.container
     h3 All Services
-    a(href="/services-admin/new")
+    a(href="/admin/services/new")
       button New Service
     
     table.u-full-width
@@ -24,7 +24,7 @@ block content
             td #{service.duration}
             td #{service.price}
             td 
-              a(href="/services-admin/#{service.id}/edit") 
+              a(href="/admin/services/#{service.id}/edit") 
                 button Edit
-              a(href="/services-admin/#{service.id}/delete")
+              a(href="/admin/services/#{service.id}/delete")
                 button Delete
