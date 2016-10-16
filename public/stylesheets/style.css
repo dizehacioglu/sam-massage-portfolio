@@ -111,12 +111,12 @@ main.container {
   display: none;
 }
 
-input[type="submit"].button-primary {
+button.button-primary, input[type="submit"].button-primary {
   background-color: #BAA6A6;
   border-color: #BAA6A6;
 }
 
-input[type="submit"].button-primary:hover {
+button.button-primary:hover, input[type="submit"].button-primary:hover {
   background-color: #2A2928;
   border-color: #2A2928;
 }
@@ -138,5 +138,5 @@ footer {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width : 767px) {
-   
+
 }
