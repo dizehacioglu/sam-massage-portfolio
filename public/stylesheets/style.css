@@ -12,7 +12,8 @@ nav {
 }
 
 nav span.title {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Sacramento', cursive;
+  font-weight: 600;
   font-size: 40px;
   color: #546E50;
 }
@@ -127,7 +128,7 @@ main.container {
 .qa-template h4 {
   display: inline-block;
   margin-right: 10px;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Sacramento', cursive;
   color: #546E50;
   size: 24px;
 }
