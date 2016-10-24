@@ -6,23 +6,30 @@ block content
     h1 Contact Me
   
   main.container
-    if error
-      .error #{error}
-    form(action="/contact" method="post")
-      .row
-        .six.columns
-          label(for='fromEmail') Your email
-          input.u-full-width(type='email', name='fromEmail', placeholder='test@mailbox.com')
-        .six.columns
-          label(for='reason') Reason for contacting
-          select.u-full-width(name='reason')
-            option(value='Appointment Request') Appointment Request
-            option(value='Questions') Questions
-            option(value='Other') Other
-      label(for='message') Message
-      textarea.u-full-width(name='message' placeholder='Hello there...')
-      //- label.example-send-yourself-copy
-      //-   input(type='checkbox')
-      //-   span.label-body Send a copy to yourself
-      .center
-        input.button-primary(type='submit', value='Submit')
+    .row
+      article.blurb 
+        i.fa.fa-info-circle
+        |  To quickly make appointments for any of my services, please visit the 
+        a(href="https://clients.mindbodyonline.com/classic/home?studioid=49051" target="_blank") Spavia 
+        | appointment booker.
+    .row
+      if error
+        .error #{error}
+      form(action="/contact" method="post")
+        .row
+          .six.columns
+            label(for='fromEmail') Your email
+            input.u-full-width(type='email', name='fromEmail', placeholder='test@mailbox.com')
+          .six.columns
+            label(for='reason') Reason for contacting
+            select.u-full-width(name='reason')
+              option(value='Appointment Request') Appointment Request
+              option(value='Questions') Questions
+              option(value='Other') Other
+        label(for='message') Message
+        textarea.u-full-width(name='message' placeholder='Hello there...')
+        //- label.example-send-yourself-copy
+        //-   input(type='checkbox')
+        //-   span.label-body Send a copy to yourself
+        .center
+          input.button-primary(type='submit', value='Submit')

@@ -14,13 +14,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/services', function(req, res, next){
-  knex('services').then(function(data){
+  knex('services').orderBy('orderId', 'asc').then(function(data){
     res.render('services', {services: data});
   })
 })
 
 router.get('/faq', function(req, res, next){
-  knex('faq').then(function(data){
+  knex('faq').orderBy('orderId', 'asc').then(function(data){
     res.render('faq', {qas: data});
   })
 })

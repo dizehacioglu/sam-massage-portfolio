@@ -16,4 +16,7 @@ block content
       .row
         label(for='answer') Price
         input#answer.u-full-width(type="text" name="price" value="#{service.price}")
+      .row
+        label(for='orderId') Order Id
+        input#answer.u-full-width(type="text" name="orderId" value="#{service.orderId}")
       input(type='submit', value='Submit')
