@@ -89,6 +89,36 @@ main.container {
   align-items: center;
 }
 
+.blurb {
+  background-color: #EEEEEE;
+  color: #a8a8a8;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.blurb a {
+  color: #546E50;
+}
+
+.services-promotions {
+  display: flex;
+  align-items: flex-start;
+}
+
+.services-listing {
+  padding: 10px;
+  width: 60%;
+}
+
+.promotions {
+  /*color: white;*/
+  background-color: #BAA6A6;
+  padding: 10px;
+  border-radius: 10px;
+  flex: 1;
+}
+
 .qa-selected {
   border-bottom: 1px solid #434343;
   /*background-color: lightblue;*/

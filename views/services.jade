@@ -5,11 +5,28 @@ block content
   .banner.services
     h1 Services
   
-  main.container.center
-    for service in services
-        h5 #{service.name} 
-          .circle
-          .circle
-          .circle 
-          | #{service.duration}
-        p #{service.price} - #{service.description}
+  main.container
+    .row
+      article.blurb 
+        i.fa.fa-info-circle
+        |  To quickly make appointments for any of these services, please visit the 
+        a(href="https://clients.mindbodyonline.com/classic/home?studioid=49051" target="_blank") Spavia 
+        | appointment booker.
+    .row.services-promotions 
+      section.services-listing
+        for service in services
+            h5.center #{service.name} 
+              .circle
+              .circle
+              .circle 
+              | #{service.duration}
+            p #{service.price} - #{service.description}
+      aside.promotions.center
+        h5 Promotions
+        if promotions
+          for promotion in promotions
+            | #{promotion.name}
+        else
+          p 
+            strong More coming soon!
+        
